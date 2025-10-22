@@ -20,6 +20,7 @@ public class RacingController {
         //레이싱카 이름 입력받기
         String carNames = inputView.inputCarName();
         //라운드 수 입력 받기
+        Long roundNum = inputView.inputRoundNum();
         //레이스 시작
             //라운드별 현황 출력
             //우승자 집계
