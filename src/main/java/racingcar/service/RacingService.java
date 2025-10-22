@@ -33,4 +33,24 @@ public class RacingService {
             racingCar.move(randomNum);
         }
     }
+
+    public List<String> findWinners(List<RacingCar> carList) {
+        Long maxDistance = findMaxDistance(carList);
+
+        List<String> winnerList = new ArrayList<>();
+        for (RacingCar racingCar : carList) {
+            if (racingCar.getDistance() == maxDistance) {
+                winnerList.add(racingCar.getCarName());
+            }
+        }
+        return winnerList;
+    }
+
+    private Long findMaxDistance(List<RacingCar> carList) {
+        Long maxDistance = 0L;
+        for (RacingCar racingCar : carList) {
+            maxDistance = Math.max(maxDistance, racingCar.getDistance());
+        }
+        return maxDistance;
+    }
 }
