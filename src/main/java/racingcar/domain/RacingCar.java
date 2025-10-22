@@ -2,6 +2,8 @@ package racingcar.domain;
 
 public class RacingCar {
 
+    private static final int MOVE_NUM = 4;
+
     private String carName;
     private Long distance;
 
@@ -13,6 +15,10 @@ public class RacingCar {
     public RacingCar from (String carName) {
         validateCarName(carName);
         return new RacingCar(carName);
+    }
+
+    public void move (int randomNum) {
+        if (randomNum >= MOVE_NUM) distance++;
     }
 
     private void validateCarName(String carName) {
