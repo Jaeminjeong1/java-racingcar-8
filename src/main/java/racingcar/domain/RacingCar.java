@@ -12,7 +12,7 @@ public class RacingCar {
         this.distance = 0L;
     }
 
-    public RacingCar from (String carName) {
+    public static RacingCar from (String carName) {
         validateCarName(carName);
         return new RacingCar(carName);
     }
@@ -21,7 +21,7 @@ public class RacingCar {
         if (randomNum >= MOVE_NUM) distance++;
     }
 
-    private void validateCarName(String carName) {
+    private static void validateCarName(String carName) {
         if (carName.isBlank() || carName.length() > 5) {
             throw new IllegalArgumentException();
         }

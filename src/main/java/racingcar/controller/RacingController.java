@@ -1,8 +1,11 @@
 package racingcar.controller;
 
+import racingcar.domain.RacingCar;
 import racingcar.service.RacingService;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
+
+import java.util.List;
 
 public class RacingController {
 
@@ -19,6 +22,7 @@ public class RacingController {
     public void start() {
         //레이싱카 이름 입력받기
         String carNames = inputView.inputCarName();
+        List<RacingCar> carList = racingService.setRacingCars(carNames);
         //라운드 수 입력 받기
         Long roundNum = inputView.inputRoundNum();
         //레이스 시작
