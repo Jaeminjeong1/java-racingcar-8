@@ -26,8 +26,18 @@ public class RacingController {
         //라운드 수 입력 받기
         Long roundNum = inputView.inputRoundNum();
         //레이스 시작
+        raceStart(roundNum, carList);
             //라운드별 현황 출력
             //우승자 집계
         //우승자 출력
+    }
+
+    private void raceStart(Long roundNum, List<RacingCar> carList) {
+        outputView.printRaceStart();
+
+        for (int i = 0; i < roundNum; i++) {
+            racingService.playOneRound(carList);
+            outputView.printOneRound(carList);
+        }
     }
 }

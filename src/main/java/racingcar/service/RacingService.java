@@ -26,4 +26,11 @@ public class RacingService {
 
         return carList;
     }
+
+    public void playOneRound(List<RacingCar> carList) {
+        for (RacingCar racingCar : carList) {
+            int randomNum = randomGenerator.generateRandomNum();
+            racingCar.move(randomNum);
+        }
+    }
 }
