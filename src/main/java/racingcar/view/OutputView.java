@@ -8,6 +8,7 @@ public class OutputView {
 
     private static final String RACE_START = "실행 결과";
     private static final String DISTANCE_SYMBOL = "-";
+    private static final String WINNER_PRINT = "최종 우승자 : ";
 
     private OutputView() {}
     public static OutputView create() {
@@ -32,5 +33,10 @@ public class OutputView {
             sb.append(DISTANCE_SYMBOL);
         }
         return sb.toString();
+    }
+
+    // 우승자들 ", "로 구분하여 출력
+    public void printWinners(List<String> winners) {
+        System.out.println(WINNER_PRINT + String.join(", ", winners));
     }
 }

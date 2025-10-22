@@ -26,8 +26,9 @@ public class RacingController {
         //라운드 수 입력 받기
         Long roundNum = inputView.inputRoundNum();
         //레이스 시작
-        raceStart(roundNum, carList);
+        List<String> winners = raceStart(roundNum, carList);
         //우승자 출력
+        outputView.printWinners(winners);
     }
 
     private List<String> raceStart(Long roundNum, List<RacingCar> carList) {
