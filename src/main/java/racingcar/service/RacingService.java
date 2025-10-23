@@ -35,7 +35,7 @@ public class RacingService {
     }
 
     public List<String> findWinners(List<RacingCar> carList) {
-        Long maxDistance = findMaxDistance(carList);
+        long maxDistance = findMaxDistance(carList);
 
         List<String> winnerList = new ArrayList<>();
         for (RacingCar racingCar : carList) {
@@ -46,8 +46,8 @@ public class RacingService {
         return winnerList;
     }
 
-    private Long findMaxDistance(List<RacingCar> carList) {
-        Long maxDistance = 0L;
+    private long findMaxDistance(List<RacingCar> carList) {
+        long maxDistance = 0L;
         for (RacingCar racingCar : carList) {
             maxDistance = Math.max(maxDistance, racingCar.getDistance());
         }
