@@ -2,21 +2,17 @@ package racingcar.service;
 
 import racingcar.domain.RacingCar;
 import racingcar.util.RandomGenerator;
+import racingcar.util.StringParser;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RacingService {
 
-    private static final String DELIMITER = ",";
-
-
-
-
     public List<RacingCar> setRacingCars(String carNames) {
         List<RacingCar> carList = new ArrayList<>();
 
-        for (String carString : carNames.split(DELIMITER)) {
+        for (String carString : StringParser.parse(carNames)) {
             RacingCar racingCar = RacingCar.from(carString.trim());
             carList.add(racingCar);
         }
