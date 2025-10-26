@@ -9,7 +9,7 @@ import racingcar.view.OutputView;
 public class AppConfig {
 
     public static RacingService createRacingService() {
-        return new RacingService(RandomGenerator.create());
+        return new RacingService();
     }
 
     public static RacingController createRacingController() {

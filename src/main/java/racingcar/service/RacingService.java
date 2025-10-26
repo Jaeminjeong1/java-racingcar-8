@@ -10,11 +10,8 @@ public class RacingService {
 
     private static final String DELIMITER = ",";
 
-    private final RandomGenerator randomGenerator;
 
-    public RacingService(RandomGenerator randomGenerator) {
-        this.randomGenerator = randomGenerator;
-    }
+
 
     public List<RacingCar> setRacingCars(String carNames) {
         List<RacingCar> carList = new ArrayList<>();
@@ -29,7 +26,7 @@ public class RacingService {
 
     public void playOneRound(List<RacingCar> carList) {
         for (RacingCar racingCar : carList) {
-            int randomNum = randomGenerator.generateRandomNum();
+            int randomNum = RandomGenerator.generateRandomNum();
             racingCar.move(randomNum);
         }
     }
