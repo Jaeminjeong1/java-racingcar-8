@@ -31,7 +31,7 @@ public class InputView {
         validateEmpty(userInput);
         validateNumberPattern(userInput);
 
-        Long roundNum = Long.parseLong(userInput);
+        Long roundNum = Long.parseLong(userInput); //valuOf, 오토박싱
         validatePositive(roundNum);
 
         return roundNum;

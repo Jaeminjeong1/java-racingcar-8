@@ -24,7 +24,7 @@ public class RacingService {
             carList.add(racingCar);
         }
 
-        return carList;
+        return List.copyOf(carList);
     }
 
     public void playOneRound(List<RacingCar> carList) {

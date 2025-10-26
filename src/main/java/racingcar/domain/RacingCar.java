@@ -3,11 +3,12 @@ package racingcar.domain;
 public class RacingCar {
 
     private static final int MOVE_NUM = 4;
+    private static final int NAME_MAX_LENGTH = 5;
 
-    private String carName;
+    private final String carName;
     private Long distance;
 
-    public RacingCar(String carName) {
+    private RacingCar(String carName) {
         this.carName = carName;
         this.distance = 0L;
     }
@@ -22,7 +23,7 @@ public class RacingCar {
     }
 
     private static void validateCarName(String carName) {
-        if (carName.isBlank() || carName.length() > 5) {
+        if (carName.isBlank() || carName.length() > NAME_MAX_LENGTH) {
             throw new IllegalArgumentException();
         }
     }

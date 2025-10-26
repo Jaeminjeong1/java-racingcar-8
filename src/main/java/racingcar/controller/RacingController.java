@@ -22,7 +22,7 @@ public class RacingController {
     public void start() {
         //레이싱카 이름 입력받기
         String carNames = inputView.inputCarName();
-        List<RacingCar> carList = racingService.setRacingCars(carNames);
+        List<RacingCar> carList = racingService.setRacingCars(carNames); //도메인 노출
         //라운드 수 입력 받기
         Long roundNum = inputView.inputRoundNum();
         //레이스 시작
@@ -31,6 +31,7 @@ public class RacingController {
         outputView.printWinners(winners);
     }
 
+    // 서비스로
     private List<String> raceStart(Long roundNum, List<RacingCar> carList) {
         outputView.printRaceStart();
 
