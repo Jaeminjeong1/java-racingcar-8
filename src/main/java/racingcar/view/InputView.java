@@ -10,7 +10,9 @@ public class InputView {
     private static final String INPUT_ROUND_NUM = "시도할 횟수는 몇 회인가요?";
     private static final Pattern NUMBER_PATTERN = Pattern.compile("\\d+");
 
-    private InputView() {}
+    private InputView() {
+    }
+
     public static InputView create() {
         return new InputView();
     }

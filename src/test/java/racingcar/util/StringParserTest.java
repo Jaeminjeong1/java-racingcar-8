@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StringParserTest {
 
     @Test
-    void 구분자_기능 () {
+    void 구분자_기능() {
         String input = "pobi,woni,jun";
         String[] result = StringParser.parse(input);
 

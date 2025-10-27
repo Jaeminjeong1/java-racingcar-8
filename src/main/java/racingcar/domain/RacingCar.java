@@ -13,12 +13,12 @@ public class RacingCar {
         this.distance = 0L;
     }
 
-    public static RacingCar from (String carName) {
+    public static RacingCar from(String carName) {
         validateCarName(carName);
         return new RacingCar(carName);
     }
 
-    public void move (int randomNum) {
+    public void move(int randomNum) {
         if (randomNum >= MOVE_NUM) distance++;
     }
 

@@ -10,7 +10,9 @@ public class OutputView {
     private static final String DISTANCE_SYMBOL = "-";
     private static final String WINNER_PRINT = "최종 우승자 : ";
 
-    private OutputView() {}
+    private OutputView() {
+    }
+
     public static OutputView create() {
         return new OutputView();
     }

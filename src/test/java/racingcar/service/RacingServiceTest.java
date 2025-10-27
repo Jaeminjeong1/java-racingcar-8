@@ -26,7 +26,7 @@ class RacingServiceTest {
     @Test
     @DisplayName("입력값으로 레이싱카 준비: trim 후 생성, 이름 보장")
     void 입력값_기준으로_레이싱카_준비() {
-        String input =  "pobi , woni , jun ";
+        String input = "pobi , woni , jun ";
 
         List<RacingCar> cars = racingService.setRacingCars(input);
 
