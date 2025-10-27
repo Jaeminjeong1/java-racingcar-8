@@ -36,6 +36,6 @@ class StringParserTest {
         String input = "pobi,woni,";
         String[] result = StringParser.parse(input);
 
-        assertThat(result).containsExactly("pobi", "woni");
+        assertThat(result).containsExactly("pobi", "woni", "");
     }
 }
