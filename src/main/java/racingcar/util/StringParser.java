@@ -7,6 +7,6 @@ public class StringParser {
     private StringParser() {}
 
     public static String[] parse(String input) {
-        return input.split(DELIMITER);
+        return input.split(DELIMITER, -1);
     }
 }
