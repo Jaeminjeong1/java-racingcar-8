@@ -2,7 +2,6 @@ package racingcar.config;
 
 import racingcar.controller.RacingController;
 import racingcar.service.RacingService;
-import racingcar.util.RandomGenerator;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 

@@ -35,7 +35,6 @@ public class OutputView {
         return sb.toString();
     }
 
-    // 우승자들 ", "로 구분하여 출력
     public void printWinners(List<String> winners) {
         System.out.println(WINNER_PRINT + String.join(", ", winners));
     }

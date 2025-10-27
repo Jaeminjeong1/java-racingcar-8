@@ -17,7 +17,7 @@ class RacingCarTest {
     @Test
     void 이름이_공백일_경우_예외() {
         assertThrows(IllegalArgumentException.class, () -> {
-            RacingCar racingCar = RacingCar.from("");
+            RacingCar.from("");
         });
     }
 
