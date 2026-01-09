@@ -1,6 +1,7 @@
 package racingcar.service;
 
 import racingcar.domain.Car;
+import racingcar.util.RandomGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,5 +16,12 @@ public class RacingService {
         }
 
         return cars;
+    }
+
+    public void startRound(List<Car> cars) {
+        for (Car car : cars) {
+            int randomNum = RandomGenerator.generateRandomNum();
+            car.move(randomNum);
+        }
     }
 }

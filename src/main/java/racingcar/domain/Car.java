@@ -27,4 +27,12 @@ public class Car {
             throw new IllegalArgumentException();
         }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
 }
