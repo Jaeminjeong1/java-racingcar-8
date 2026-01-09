@@ -9,8 +9,10 @@ public class OutputView {
     private static final String RESULT_INFO = "\n실행 결과";
     private static final String DISTANCE = "-";
     private static final String ROUND_RESULT = "%s : %s\n";
+    private static final String WINNER_PRINT = "최종 우승자 : ";
 
-    private OutputView(){}
+    private OutputView() {
+    }
 
     public static void printResultInfo() {
         System.out.println(RESULT_INFO);
@@ -23,6 +25,10 @@ public class OutputView {
             int distance = car.distance();
             System.out.printf(ROUND_RESULT, name, switchResultFormat(distance));
         }
+    }
+
+    public static void printWinners(List<String> winners) {
+        System.out.println(WINNER_PRINT + String.join(",", winners));
     }
 
     private static String switchResultFormat(int distance) {

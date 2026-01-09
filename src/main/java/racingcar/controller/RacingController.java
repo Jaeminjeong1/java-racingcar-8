@@ -30,6 +30,7 @@ public class RacingController {
         playRound(tryCount, cars);
 
         // 최종 우승자 출력
+        printWinners(cars);
     }
 
     private void playRound(int tryCount, List<Car> cars) {
@@ -37,5 +38,10 @@ public class RacingController {
             racingService.startRound(cars);
             OutputView.printRoundResult(CarDto.from(cars));
         }
+    }
+
+    private void printWinners(List<Car> cars) {
+        List<String> winners = racingService.calculateWinner(cars);
+        OutputView.printWinners(winners);
     }
 }

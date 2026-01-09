@@ -24,4 +24,27 @@ public class RacingService {
             car.move(randomNum);
         }
     }
+
+    public List<String> calculateWinner(List<Car> cars) {
+        List<String> result = new ArrayList<>();
+
+        int maxDistance = getMaxDistance(cars);
+        for (Car car : cars) {
+            if (car.getDistance() == maxDistance) {
+                result.add(car.getName());
+            }
+        }
+        return result;
+    }
+
+    private static int getMaxDistance(List<Car> cars) {
+        int maxDistance = 0;
+        for (Car car : cars) {
+            int distance = car.getDistance();
+            if (distance > maxDistance) {
+                maxDistance = distance;
+            }
+        }
+        return maxDistance;
+    }
 }
